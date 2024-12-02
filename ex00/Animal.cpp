@@ -3,11 +3,40 @@
 /*                                                        :::      ::::::::   */
 /*   Animal.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ngtina1999 <ngtina1999@student.42.fr>      +#+  +:+       +#+        */
+/*   By: thuy-ngu <thuy-ngu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/16 19:59:38 by thuy-ngu          #+#    #+#             */
-/*   Updated: 2024/12/02 07:00:26 by ngtina1999       ###   ########.fr       */
+/*   Updated: 2024/12/02 23:22:56 by thuy-ngu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Animal.hpp"
+
+Animal::Animal(std::string const &type) : _type(type) {
+	std::cout << "Animal  constructor called with " << this->_type << std::endl;
+}
+
+Animal::Animal() : _type("basicAnimal") {
+	std::cout << "Animal default constructor called with " << this->_type << std::endl;
+}
+
+Animal::~Animal() {
+	std::cout << "Animal destructor called with " << this->_type << std::endl;
+}
+
+Animal::Animal(Animal const &src) 
+	: _type(src._type) {
+	std::cout << "Animal copy constructor called with " << this->_type << std::endl;
+}
+
+Animal &Animal::operator=(const Animal &rhs) {
+	std::cout << "Animal copy assignment operator called with " << this->_type << std::endl;
+	if (this != &rhs)
+		this->_type = rhs._type;
+	return (*this);
+}
+
+void	Animal::makeSound() const
+{
+	std::cout << "Animal " << this->_type << " made an animal sound!" << std::endl;
+}

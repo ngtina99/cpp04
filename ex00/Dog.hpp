@@ -3,10 +3,30 @@
 /*                                                        :::      ::::::::   */
 /*   Dog.hpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ngtina1999 <ngtina1999@student.42.fr>      +#+  +:+       +#+        */
+/*   By: thuy-ngu <thuy-ngu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/02 07:02:00 by ngtina1999        #+#    #+#             */
-/*   Updated: 2024/12/02 07:02:01 by ngtina1999       ###   ########.fr       */
+/*   Updated: 2024/12/02 23:31:48 by thuy-ngu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#ifndef DOG_HPP
+# define DOG_HPP
+
+# include "Animal.hpp"
+
+class Dog: virtual public Animal {
+
+	public:
+
+		Dog();
+		Dog(std::string const &type);
+		~Dog(); //try virtual
+		Dog( Dog const &src );
+		Dog	&operator=( Dog const &rhs );
+
+		virtual void	makeSound() const;
+
+};
+
+#endif
