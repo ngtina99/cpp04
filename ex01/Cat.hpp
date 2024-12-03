@@ -6,7 +6,7 @@
 /*   By: thuy-ngu <thuy-ngu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/02 07:02:01 by ngtina1999        #+#    #+#             */
-/*   Updated: 2024/12/03 16:45:29 by thuy-ngu         ###   ########.fr       */
+/*   Updated: 2024/12/03 18:23:12 by thuy-ngu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,7 @@ class Cat : virtual public Animal {
 		Cat	&operator=( Cat const &rhs );
 
 		virtual void	makeSound() const;
+		void printBrainAddress() const;
 
 	private:
 

@@ -6,7 +6,7 @@
 /*   By: thuy-ngu <thuy-ngu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/16 19:59:38 by thuy-ngu          #+#    #+#             */
-/*   Updated: 2024/12/03 16:55:10 by thuy-ngu         ###   ########.fr       */
+/*   Updated: 2024/12/03 18:43:00 by thuy-ngu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,12 +24,11 @@ Cat::Cat() : Animal("basicCat") {
 
 Cat::~Cat() {
 	std::cout << "Cat destructor called with " << this->_type << std::endl;
-	delete (this->_brain);// (do it with and without)
+	delete (this->_brain);
 }
 
 Cat::Cat(Cat const &src) : Animal(src._type) {
 	std::cout << "Cat copy constructor called with " << this->_type << std::endl;
-	delete (this->_brain);
 	this->_brain = new Brain(*(src._brain));
 }
 
@@ -47,3 +46,8 @@ void	Cat::makeSound() const
 {
 	std::cout << "Cat " << this->_type << " made a cat sound!" << std::endl;
 }
+
+void	Cat::printBrainAddress() const {
+		std::cout << "catBrain address: " << _brain << std::endl;
+}
+
