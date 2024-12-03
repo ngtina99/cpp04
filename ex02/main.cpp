@@ -6,7 +6,7 @@
 /*   By: thuy-ngu <thuy-ngu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/16 19:59:38 by thuy-ngu          #+#    #+#             */
-/*   Updated: 2024/12/03 21:11:49 by thuy-ngu         ###   ########.fr       */
+/*   Updated: 2024/12/03 21:16:23 by thuy-ngu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,10 +21,10 @@ int	main(void)
 	std::cout << "\nCheck constructors" << std::endl;
 	std::cout << "\n--------------------------------------------------" << std::endl;
 
-	// AAnimal *test = new AAnimal();
-	// test->makeSound();
+	//Animal test;
+	//test.makeSound();
 	
-	const AAnimal	*meta[10];
+	const Animal	*meta[10];
 	for (int i = 0; i <= 10; i++)
 	{
 		std::cout << i << " ";
