@@ -6,7 +6,7 @@
 /*   By: thuy-ngu <thuy-ngu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/02 07:02:00 by ngtina1999        #+#    #+#             */
-/*   Updated: 2024/12/02 23:46:05 by thuy-ngu         ###   ########.fr       */
+/*   Updated: 2024/12/03 01:35:24 by thuy-ngu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 # define DOG_HPP
 
 # include "Animal.hpp"
+# include "Brain.hpp"
 
 class Dog: virtual public Animal {
 
@@ -26,6 +27,10 @@ class Dog: virtual public Animal {
 		Dog	&operator=( Dog const &rhs );
 
 		virtual void	makeSound() const;
+	
+	private:
+
+		Brain	*_brain;
 
 };
 
