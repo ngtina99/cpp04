@@ -6,17 +6,17 @@
 /*   By: thuy-ngu <thuy-ngu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/02 07:02:00 by ngtina1999        #+#    #+#             */
-/*   Updated: 2024/12/03 17:05:47 by thuy-ngu         ###   ########.fr       */
+/*   Updated: 2024/12/03 20:55:56 by thuy-ngu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef DOG_HPP
 # define DOG_HPP
 
-# include "Animal.hpp"
+# include "AAnimal.hpp"
 # include "Brain.hpp"
 
-class Dog: virtual public Animal {
+class Dog: virtual public AAnimal {
 
 	public:
 
@@ -27,7 +27,8 @@ class Dog: virtual public Animal {
 		Dog	&operator=( Dog const &rhs );
 
 		virtual void	makeSound() const;
-	
+	    void printBrainAddress() const;
+
 	private:
 
 		Brain	*_brain;

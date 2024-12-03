@@ -6,18 +6,18 @@
 /*   By: thuy-ngu <thuy-ngu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/16 19:59:38 by thuy-ngu          #+#    #+#             */
-/*   Updated: 2024/12/03 16:55:18 by thuy-ngu         ###   ########.fr       */
+/*   Updated: 2024/12/03 20:55:37 by thuy-ngu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Dog.hpp"
 
-Dog::Dog(std::string const &type) : Animal(type) {
+Dog::Dog(std::string const &type) : AAnimal(type) {
 	std::cout << "Dog  constructor called with " << this->_type << std::endl;
 	this->_brain = new Brain();
 }
 
-Dog::Dog() : Animal("basicDog") {
+Dog::Dog() : AAnimal("basicDog") {
 	std::cout << "Dog default constructor called with " << this->_type << std::endl;
 	this->_brain = new Brain();
 }
@@ -27,9 +27,8 @@ Dog::~Dog() {
 	delete (this->_brain);
 }
 
-Dog::Dog(Dog const &src) : Animal(src) {
+Dog::Dog(Dog const &src) : AAnimal(src) {
 	std::cout << "Dog copy constructor called with " << this->_type << std::endl;
-	delete (this->_brain);
 	this->_brain = new Brain(*(src._brain));
 }
 
@@ -46,4 +45,8 @@ Dog &Dog::operator=(const Dog &rhs) {
 void	Dog::makeSound() const
 {
 	std::cout << "Dog " << this->_type << " made a dog sound!" << std::endl;
+}
+
+void	Dog::printBrainAddress() const {
+		std::cout << this->_type << " dogBrain address: " << _brain << std::endl;
 }

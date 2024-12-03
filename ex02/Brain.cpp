@@ -6,7 +6,7 @@
 /*   By: thuy-ngu <thuy-ngu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/02 07:03:18 by ngtina1999        #+#    #+#             */
-/*   Updated: 2024/12/03 16:55:50 by thuy-ngu         ###   ########.fr       */
+/*   Updated: 2024/12/03 18:37:37 by thuy-ngu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,9 @@
 
 Brain::Brain() {
 	std::cout << "Brain default constructor called "<< std::endl;
+	for (int i = 0; i < 100; i++) {
+		_ideas[i] = "Idea";
+	}
 }
 
 Brain::~Brain() {
