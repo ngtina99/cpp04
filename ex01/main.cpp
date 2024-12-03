@@ -6,7 +6,7 @@
 /*   By: thuy-ngu <thuy-ngu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/16 19:59:38 by thuy-ngu          #+#    #+#             */
-/*   Updated: 2024/12/03 18:52:05 by thuy-ngu         ###   ########.fr       */
+/*   Updated: 2024/12/03 19:17:56 by thuy-ngu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,9 @@
 
 int	main(void)
 {
+	std::cout << "\n--------------------------------------------------" << std::endl;
+	std::cout << "\nCheck constructors" << std::endl;
+	std::cout << "\n--------------------------------------------------" << std::endl;
 	const Animal	*meta[10];
 	int				size = 5;
 
@@ -28,50 +31,28 @@ int	main(void)
 	for (int i = 0; i < 10; i++)
  			delete meta[i];
 
+	std::cout << "\n--------------------------------------------------" << std::endl;
+	std::cout << "\nCheck deep copy of Dog and its copy constructor" << std::endl;
+	std::cout << "\n--------------------------------------------------" << std::endl;
 	Dog basicDog;
 
 	basicDog.printBrainAddress(); 
 	{
-		Dog tmp = basicDog;  // Deep copy constructor should be called here
+		Dog tmp(basicDog);
 		tmp.printBrainAddress();
-        // At the end of this block, tmp goes out of scope and is destroyed
 	}
 	basicDog.printBrainAddress(); 
 
+	std::cout << "\n--------------------------------------------------" << std::endl;
+	std::cout << "\nCheck deep copy of Cat and its copy constructor" << std::endl;
+	std::cout << "\n--------------------------------------------------" << std::endl;
 	Cat basicCat;
 
 	basicCat.printBrainAddress(); 
 	{
-		Cat tmp = basicCat;
+		Cat tmp(basicCat);
 		tmp.printBrainAddress();
 	}
 	basicCat.printBrainAddress();
-
-    std::cout << "-------------------------------------\n";
-    {
-        std::cout << "Check deep copy of Dog class using copy constructor:\n" << std::endl;
-        Dog* dogA = new Dog;
-        Dog* dogB = new Dog(*dogA);  // Use the copy constructor
-
-        dogA->printBrainAddress();
-        dogB->printBrainAddress();
-
-        delete dogA;
-        delete dogB;
-    }
-
-    std::cout << "-------------------------------------\n";
-    {
-        std::cout << "Check deep copy of Dog class using assignment operator overload:\n" << std::endl;
-        Dog* dogA = new Dog;
-        Dog* dogB = new Dog;
-
-        *dogA = *dogB;  // Use the assignment operator overload
-
-        dogA->printBrainAddress();
-        dogB->printBrainAddress();
-
-        delete dogA;
-        delete dogB;
-    }
+	
 }
