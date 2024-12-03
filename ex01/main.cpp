@@ -6,7 +6,7 @@
 /*   By: thuy-ngu <thuy-ngu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/16 19:59:38 by thuy-ngu          #+#    #+#             */
-/*   Updated: 2024/12/03 01:27:15 by thuy-ngu         ###   ########.fr       */
+/*   Updated: 2024/12/03 01:20:52 by thuy-ngu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,8 +41,6 @@ int main()
 	delete i;
 	delete j;
 	delete meta;
-	delete k;
-	delete meta2;
 	return(0);
 
 }
