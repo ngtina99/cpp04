@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Animal.hpp                                         :+:      :+:    :+:   */
+/*   AAnimal.hpp                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: thuy-ngu <thuy-ngu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/16 19:59:38 by thuy-ngu          #+#    #+#             */
-/*   Updated: 2024/12/02 23:45:09 by thuy-ngu         ###   ########.fr       */
+/*   Updated: 2024/12/03 20:05:15 by thuy-ngu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ class Animal {
 		Animal( Animal const &src );
 		Animal	&operator=( Animal const &rhs );
 
-		virtual void	makeSound() const;
+		virtual void	makeSound() const = 0;
 		std::string		getType() const;
 
 	protected:

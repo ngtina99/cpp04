@@ -6,7 +6,7 @@
 /*   By: thuy-ngu <thuy-ngu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/16 19:59:38 by thuy-ngu          #+#    #+#             */
-/*   Updated: 2024/12/03 20:24:46 by thuy-ngu         ###   ########.fr       */
+/*   Updated: 2024/12/03 20:22:42 by thuy-ngu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ int	main(void)
 	}
 	for (int i = 0; i <= 10; i++) {
 		std::cout << i << " ";
-		meta[i]->makeSound();
+		//meta[i]->makeSound();
 		delete meta[i];
 		std::cout << std::endl;
 	}
