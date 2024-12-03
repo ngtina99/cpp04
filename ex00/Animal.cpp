@@ -6,7 +6,7 @@
 /*   By: thuy-ngu <thuy-ngu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/16 19:59:38 by thuy-ngu          #+#    #+#             */
-/*   Updated: 2024/12/02 23:22:56 by thuy-ngu         ###   ########.fr       */
+/*   Updated: 2024/12/02 23:43:39 by thuy-ngu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,4 +39,9 @@ Animal &Animal::operator=(const Animal &rhs) {
 void	Animal::makeSound() const
 {
 	std::cout << "Animal " << this->_type << " made an animal sound!" << std::endl;
+}
+
+std::string	Animal::getType() const
+{
+	return (this->_type);
 }

@@ -6,7 +6,7 @@
 /*   By: thuy-ngu <thuy-ngu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/16 19:59:38 by thuy-ngu          #+#    #+#             */
-/*   Updated: 2024/12/02 23:35:38 by thuy-ngu         ###   ########.fr       */
+/*   Updated: 2024/12/02 23:43:36 by thuy-ngu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,4 +39,9 @@ WrongAnimal &WrongAnimal::operator=(const WrongAnimal &rhs) {
 void	WrongAnimal::makeSound() const
 {
 	std::cout << "WrongAnimal " << this->_type << " made a wronganimal sound!" << std::endl;
+}
+
+std::string	WrongAnimal::getType() const
+{
+	return (this->_type);
 }

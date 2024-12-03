@@ -6,7 +6,7 @@
 /*   By: thuy-ngu <thuy-ngu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/02 07:02:00 by ngtina1999        #+#    #+#             */
-/*   Updated: 2024/12/02 23:31:48 by thuy-ngu         ###   ########.fr       */
+/*   Updated: 2024/12/02 23:46:05 by thuy-ngu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ class Dog: virtual public Animal {
 
 		Dog();
 		Dog(std::string const &type);
-		~Dog(); //try virtual
+		~Dog();
 		Dog( Dog const &src );
 		Dog	&operator=( Dog const &rhs );
 

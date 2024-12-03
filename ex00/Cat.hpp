@@ -6,7 +6,7 @@
 /*   By: thuy-ngu <thuy-ngu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/02 07:02:01 by ngtina1999        #+#    #+#             */
-/*   Updated: 2024/12/02 23:31:41 by thuy-ngu         ###   ########.fr       */
+/*   Updated: 2024/12/02 23:47:10 by thuy-ngu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,13 +15,13 @@
 
 # include "Animal.hpp"
 
-class Cat: virtual public Animal {
+class Cat : virtual public Animal {
 
 	public:
 
 		Cat();
 		Cat(std::string const &type);
-		~Cat(); //try virtual
+		~Cat();
 		Cat( Cat const &src );
 		Cat	&operator=( Cat const &rhs );
 

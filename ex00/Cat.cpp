@@ -6,17 +6,17 @@
 /*   By: thuy-ngu <thuy-ngu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/16 19:59:38 by thuy-ngu          #+#    #+#             */
-/*   Updated: 2024/12/02 23:26:50 by thuy-ngu         ###   ########.fr       */
+/*   Updated: 2024/12/03 01:17:35 by thuy-ngu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Cat.hpp"
 
-Cat::Cat(std::string const &type) : _type(type) {
+Cat::Cat(std::string const &type) : Animal(type) {
 	std::cout << "Cat  constructor called with " << this->_type << std::endl;
 }
 
-Cat::Cat() : _type("basicCat") {
+Cat::Cat() : Animal("basicCat") {
 	std::cout << "Cat default constructor called with " << this->_type << std::endl;
 }
 
@@ -24,8 +24,7 @@ Cat::~Cat() {
 	std::cout << "Cat destructor called with " << this->_type << std::endl;
 }
 
-Cat::Cat(Cat const &src) 
-	: _type(src._type) {
+Cat::Cat(Cat const &src) : Animal(src) {
 	std::cout << "Cat copy constructor called with " << this->_type << std::endl;
 }
 
